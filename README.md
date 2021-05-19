@@ -6,4 +6,4 @@
 4. Open VSCode terminal and type this command = install npm
 5. Open VSCode terminal and type this command for run android =react-native run-android
 6. Open VSCode terminal and type this command for install pod = cd ios && rm -rf Pods && rm podfile.lock && pod install
-7. pen VSCode terminal and type this command for run ios = react-native run-ios
+7. Open VSCode terminal and type this command for run ios = react-native run-ios
