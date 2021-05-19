@@ -7,7 +7,14 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "android:build": "cd android && ./gradlew assembleRelease",
+    "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
+    "android:cleanWithGradle": "cd android && ./gradlew clean",
+    "android:clear": "cd android/app/src/main/assets && rm -rf index.android.bundle && cd ../../.. && rm -rf build/ && cd ../.. && cd android/app/src/main/res && rm -rf drawable-hdpi/ && rm -rf drawable-xhdpi/ && rm -rf drawable-xxhdpi/ && rm -rf drawable-mdpi/ && rm -rf drawable-xxxhdpi/ && cd ../../../../..",
+    "android:bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "ios:bundle": "react-native bundle --minify --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest ./ios",
+    "ios:reinstallPods": "cd ios && rm -rf Pods && rm podfile.lock && pod install"
   },
   "dependencies": {
     "react": "17.0.1",
